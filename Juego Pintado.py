@@ -22,12 +22,16 @@ def square(start, end):
 
     end_fill()
 
-def circle(start, end):
+def circulo(start, end):
     "Draw circle from start to end."
-    pass  # TODO
+    distancia = end.x - start.x
+    begin_fill()
+    circle(distancia)
+    end_fill()
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
+    begin_fill()
     turtle.forward(100)
     turtle.left(90)
     turtle.forward(50)
@@ -36,6 +40,7 @@ def rectangle(start, end):
     turtle.left(90)
     turtle.forward(50)
     turtle.left(90)
+    end_fill()
 
 def triangle(start, end):
     "Draw triangle from start to end."
@@ -76,10 +81,12 @@ onkey(lambda: color('white'), 'W')
 onkey(lambda: color('green'), 'G')
 onkey(lambda: color('blue'), 'B')
 onkey(lambda: color('red'), 'R')
+onkey(lambda: color('yellow'), 'Y') #Color agregado por mi#
+onkey(lambda: color('#F5B7B1'), 'Q') #Nuevo color agregado#
 onkey(lambda: color('yellow'), 'Y')
 onkey(lambda: store('shape', line), 'l')
 onkey(lambda: store('shape', square), 's')
-onkey(lambda: store('shape', circle), 'c')
+onkey(lambda: store('shape', circulo), 'c')
 onkey(lambda: store('shape', rectangle), 'r')
 onkey(lambda: store('shape', triangle), 't')
 done()
