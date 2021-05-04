@@ -1,5 +1,6 @@
 from turtle import *
 from freegames import vector
+import turtle
 
 def line(start, end):
     "Draw line from start to end."
@@ -27,7 +28,14 @@ def circle(start, end):
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
-    pass  # TODO
+    turtle.forward(100)
+    turtle.left(90)
+    turtle.forward(50)
+    turtle.left(90)
+    turtle.forward(100)
+    turtle.left(90)
+    turtle.forward(50)
+    turtle.left(90)
 
 def triangle(start, end):
     "Draw triangle from start to end."
