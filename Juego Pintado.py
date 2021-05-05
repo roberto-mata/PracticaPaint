@@ -71,7 +71,6 @@ def tap(x, y):
         
         #reinicia start con None - para/indicar que lo sig es nuevo
         state['start'] = None
-
 def store(key, value):
     "Store value in state at key."
     state[key] = value
